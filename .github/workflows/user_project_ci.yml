@@ -99,10 +99,12 @@ jobs:
           make user_project_wrapper
 
       - name: Upload logs
+        if: failure()
         uses: actions/upload-artifact@v2
         with:
           name: openlane-logs
-          path: /home/runner/work/caravel_user_gf_ci/caravel_user_gf_ci/openlane/user_proj_example/runs/
+          path: |
+            /home/runner/work/caravel_user_gf_ci/caravel_user_gf_ci/openlane/user_proj_example/runs/
           
       - name: run precheck
         run: |
