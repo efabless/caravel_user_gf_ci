@@ -69,10 +69,7 @@ jobs:
         run: echo "PDKPATH=/home/runner/work/pdk/g180mcuC" >> $GITHUB_ENV
 
       - name: Export PDK
-        run: echo "PDK=g180mcuC" >> $GITHUB_ENV
-
-      - name: Export MPW_TAG
-        run: echo "MPW_TAG=gfmpw-0a" >> $GITHUB_ENV
+        run: echo "PDK=gf180mcuC" >> $GITHUB_ENV
         
       - name: Export OPENLANE ROOT
         run: echo "OPENLANE_ROOT=/home/runner/work/caravel_user_project/openlane" >> $GITHUB_ENV
